@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dcf5ff;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    padding: 20px;
+    background-image: url('Assets/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px; 
+    color: rgb(42, 100, 224);
+}
+
+
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+   
+    
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    background:whitesmoke;
+    border-radius: 10px;
+    border:3px solid  rgb(42, 100, 224);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.details-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 2;
+
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px;
+}
+
+.nav-button {
+    background: rgb(42, 100, 224);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.nav-button:disabled {
+    background: #797373;
+    cursor: not-allowed;
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .carousel {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .carousel {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel {
+        grid-template-columns: 1fr;
+    }
+}

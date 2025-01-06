@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos Carousel</title>
+    <link rel="stylesheet" href="Home.css">
+    <script defer src="Home.js"></script> 
+</head>
+    <body>
+        <header>
+            <h1>Todo Website</h1>
+        </header>
+    
+        <div class="carousel-container">
+            <div class="carousel" id="carousel"></div>
+            
+        </div>
+    
+        <div class="navigation">
+            <button class="nav-button" id="prev">Previous</button>
+            <button class="nav-button" id="next">Next</button>
+        </div>
+    
+        <div class="modal-overlay" id="overlay"></div>
+        <div class="details-modal" id="modal">
+            <h2>Todo Details</h2>
+            <p><strong>ID:</strong> <span id="todo-id"></span></p>
+            <p><strong>Title:</strong> <span id="todo-title"></span></p>
+            <p><strong>Completed:</strong> <span id="todo-completed"></span></p>
+            <button class="nav-button" id="close-modal">Close</button>
+        </div>
+    
+    </body>
+</html>
